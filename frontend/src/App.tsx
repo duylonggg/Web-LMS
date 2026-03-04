@@ -23,6 +23,7 @@ import TeacherNotifications from './pages/teacher/TeacherNotifications'
 import ThuVienXanhLibraryPage from './pages/thu-vien-xanh/ThuVienXanhLibraryPage'
 import DocHieuFullscreenModal from './pages/thu-vien-xanh/DocHieuFullscreenModal'
 import TichHopFullscreenModal from './pages/thu-vien-xanh/TichHopFullscreenModal'
+import { CongDongTrachNhiemPage, HiepSiXanhPage, SuGiaHoaBinhPage } from './pages/cong-dong'
 
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
@@ -54,6 +55,11 @@ export default function App() {
             <Route path="/library/:id" element={<LibraryDetail />} />
             <Route path="/community" element={<CommunityList />} />
             <Route path="/community/:communityKey" element={<CommunityDetail />} />
+
+            {/* Cong Dong Trac Nhiem routes */}
+            <Route path="/cong-dong" element={<CongDongTrachNhiemPage />} />
+            <Route path="/cong-dong/hiep-si-xanh" element={<HiepSiXanhPage />} />
+            <Route path="/cong-dong/su-gia-hoa-binh" element={<SuGiaHoaBinhPage />} />
 
             {/* Student routes */}
             <Route

@@ -19,15 +19,6 @@ const communities = [
     border: 'border-blue-200',
     badge: 'bg-blue-100 text-blue-700',
   },
-  {
-    key: 'an-toan-cong-nghe',
-    name: 'An toàn công nghệ',
-    emoji: '🔐',
-    description: 'Cộng đồng về an ninh mạng, sử dụng công nghệ an toàn và bảo vệ thông tin cá nhân.',
-    color: 'from-purple-50 to-violet-50',
-    border: 'border-purple-200',
-    badge: 'bg-purple-100 text-purple-700',
-  },
 ]
 
 export default function CommunityList() {
