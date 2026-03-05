@@ -113,7 +113,7 @@ export default function TeacherClassDetail() {
   }, [classId])
 
   const typedAssignments = useMemo(() => {
-    if (!cls) return []
+    if (!cls || !cls.assignments) return []
     return cls.assignments.filter((a) => a.type === taskType)
   }, [cls, taskType])
 
@@ -127,11 +127,11 @@ export default function TeacherClassDetail() {
     }
   }, [typedAssignments, selectedAssignmentId])
 
-  const pendingByTaskType = useMemo(() => submissions.filter((s) => s.assignment.type === taskType), [submissions, taskType])
+  const pendingByTaskType = useMemo(() => submissions.filter((s) => s.assignment && s.assignment.type === taskType), [submissions, taskType])
 
   const selectedPending = useMemo(() => {
     if (!selectedAssignmentId) return []
-    return pendingByTaskType.filter((s) => s.assignment.id === selectedAssignmentId)
+    return pendingByTaskType.filter((s) => s.assignment && s.assignment.id === selectedAssignmentId)
   }, [pendingByTaskType, selectedAssignmentId])
 
   if (loading) {
