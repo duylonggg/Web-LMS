@@ -12,7 +12,10 @@ import LibraryDetail from './pages/library/LibraryDetail'
 import CommunityList from './pages/community/CommunityList'
 import CommunityDetail from './pages/community/CommunityDetail'
 import StudentDashboard from './pages/student/StudentDashboard'
-import ClassDetail from './pages/student/ClassDetail'
+import StudentClassDetail from './pages/student/StudentClassDetail'
+import AssignmentDetail from './pages/student/AssignmentDetail'
+import ProductsPage from './pages/student/ProductsPage'
+import ProfilePage from './pages/student/ProfilePage'
 import Submissions from './pages/student/Submissions'
 import Notifications from './pages/student/Notifications'
 import TeacherDashboard from './pages/teacher/TeacherDashboard'
@@ -28,10 +31,11 @@ import { CongDongTrachNhiemPage, HiepSiXanhPage, SuGiaHoaBinhPage } from './page
 function Layout({ children }: { children: React.ReactNode }) {
   const location = useLocation()
   const isThuVienXanh = location.pathname.startsWith('/thu-vien-xanh')
+  const isStudentPortal = location.pathname.startsWith('/student')
 
   return (
     <div className={isThuVienXanh ? 'min-h-screen' : 'min-h-screen bg-gray-50'}>
-      {!isThuVienXanh && <Header />}
+      {!isThuVienXanh && !isStudentPortal && <Header />}
       <main>{children}</main>
     </div>
   )
@@ -74,7 +78,31 @@ export default function App() {
               path="/student/class/:classId"
               element={
                 <ProtectedRoute role="STUDENT">
-                  <ClassDetail />
+                  <StudentClassDetail />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/class/:classId/assignment/:assignmentId"
+              element={
+                <ProtectedRoute role="STUDENT">
+                  <AssignmentDetail />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/products"
+              element={
+                <ProtectedRoute role="STUDENT">
+                  <ProductsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/student/profile"
+              element={
+                <ProtectedRoute role="STUDENT">
+                  <ProfilePage />
                 </ProtectedRoute>
               }
             />
