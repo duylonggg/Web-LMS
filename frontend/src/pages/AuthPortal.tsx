@@ -146,6 +146,7 @@ export default function AuthPortal() {
                     value={email}
                     onChange={(event) => setEmail(event.target.value)}
                     className="h-14 w-full rounded-full bg-[#c8e7ec] px-6 text-xl text-[#11337e] outline-none focus:ring-2 focus:ring-[#1c85a2]"
+                    placeholder="Nhập Email"
                     required
                   />
                 </div>
@@ -157,6 +158,7 @@ export default function AuthPortal() {
                     value={password}
                     onChange={(event) => setPassword(event.target.value)}
                     className="h-14 w-full rounded-full bg-[#c8e7ec] px-6 text-xl text-[#11337e] outline-none focus:ring-2 focus:ring-[#1c85a2]"
+                    placeholder="Nhập mật khẩu"
                     required
                   />
                 </div>
