@@ -93,7 +93,7 @@ export default function HomePageHeader() {
                 letterSpacing: '0.05em'
               }}
             >
-              THƯ VIỆN KHOA HỌC VIỄN TƯỞNG
+              THẾ GIỚI KHOA HỌC VIỄN TƯỞNG
             </h1>
           </div>
 
@@ -112,21 +112,13 @@ export default function HomePageHeader() {
             }}
           >
             {/* Book icon inside circle */}
-            <svg
+            <img
+              src="/src/img/SVG/logo.svg"
+              width="60"
+              height="60"
+              alt="Logo thư viện"
               className="text-blue-600"
-              width="40"
-              height="40"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              />
-            </svg>
+            />
           </div>
 
           {/* RIGHT SECTION - Buttons and Menu */}
@@ -136,7 +128,6 @@ export default function HomePageHeader() {
               onClick={() => navigate('/dang-nhap')}
               className="hidden md:block text-white text-sm font-semibold rounded-full transition-all duration-300"
               style={{
-                border: '1px solid rgba(255, 255, 255, 0.6)',
                 background: 'transparent',
                 padding: '6px 18px',
                 letterSpacing: '0.03em'
@@ -152,7 +143,6 @@ export default function HomePageHeader() {
               onClick={() => navigate('/dang-ky')}
               className="hidden md:block text-white text-sm font-semibold rounded-full transition-all duration-300"
               style={{
-                border: '1px solid rgba(255, 255, 255, 0.6)',
                 background: 'transparent',
                 padding: '6px 18px',
                 letterSpacing: '0.03em'
@@ -178,7 +168,7 @@ export default function HomePageHeader() {
           </div>
         </div>
 
-        {/* Mobile dropdown menu */}
+        {/* Mobile dropdown menu
         {menuOpen && (
           <div 
             className="mt-4 rounded-3xl overflow-hidden shadow-xl"
@@ -206,6 +196,23 @@ export default function HomePageHeader() {
               >
                 ĐĂNG KÝ
               </button>
+            </div>
+          </div>
+        )} */}
+        {/* Mobile popup */}
+        {menuOpen && (
+          <div className="absolute right-4 top-16 z-50">
+            <div
+              className="rounded-2xl p-4 shadow-xl w-56"
+              style={{
+                background: "#c7d9e0",
+                border: "2px solid #4aa3c0",
+              }}
+            >
+              <p className="text-blue-900 text-sm font-semibold">
+                Ý nghĩa tên <br />
+                "Viễn tưởng xanh"
+              </p>
             </div>
           </div>
         )}
