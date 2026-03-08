@@ -73,16 +73,18 @@ export default function AuthPortal() {
 
         <div className="mx-auto w-full max-w-6xl px-4 pb-12 pt-10 lg:pt-16">
           <div className="flex items-start gap-8">
-            <button
-              type="button"
-              onClick={() => navigate('/trang-chu')}
-              className="mt-6 hidden h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-[#1e3f97] text-white shadow-lg transition hover:scale-105 md:flex"
-              aria-label="Quay lại"
-            >
-              <svg viewBox="0 0 24 24" className="h-10 w-10" fill="currentColor">
-                <path d="M14.5 5.5 8 12l6.5 6.5v-4h6v-5h-6v-4Z" />
-              </svg>
-            </button>
+          <button
+            type="button"
+            onClick={() => navigate('/trang-chu')}
+            className="mt-6 hidden h-16 w-16 shrink-0 items-center justify-center rounded-xl text-white transition hover:scale-105 md:flex"
+            aria-label="Quay lại"
+          >
+            <img
+              src="/src/img/SVG/back-button.svg"
+              alt="Back"
+              className="h-10 w-10 object-contain"
+            />
+          </button>
 
             <div className="mx-auto w-full max-w-3xl rounded-[36px] border-2 border-[#7ddca0] bg-[rgba(244,249,248,0.92)] p-6 shadow-[0_0_0_2px_#1f629b] sm:p-9">
               <div className="mx-auto mb-8 flex w-full max-w-xl rounded-full border-2 border-[#7ddca0] bg-[#e8f4f2] p-1.5">

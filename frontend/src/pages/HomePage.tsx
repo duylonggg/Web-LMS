@@ -65,7 +65,8 @@ export default function HomePage() {
       className="min-h-screen relative overflow-x-hidden bg-cover bg-center bg-no-repeat"
       style={{ 
         backgroundImage: `url(${bgImage})`,
-        backgroundAttachment: 'scroll'
+        backgroundAttachment: 'scroll',
+        backgroundSize: '100%'
       }}
     >
       {/* Scroll Progress Bar */}
@@ -110,13 +111,13 @@ export default function HomePage() {
           
           {/* Quote text */}
           <motion.p 
-            className="text-xl leading-relaxed text-[#1e3a8a] max-w-[750px] text-center font-medium"
+            className="text-2xl leading-relaxed text-[#1e3a8a] max-w-[800px] text-center font-medium"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            "Bằng cách đọc tác phẩm văn học, chúng ta có thể hòa thiện vào nhiều hành trình sống, 
-            để rồi hiểu cảm nhận những giá trị sống, tự đa hóa cách sống của bản thân, người khác và môi trường."
+            Bằng cách đọc tác phẩm văn học, chúng ta có thể hòa thiện vào nhiều hành trình sống, 
+            để rồi hiểu cảm nhận những giá trị sống, tự đa hóa cách sống của bản thân, người khác và môi trường.
           </motion.p>
         </div>
         

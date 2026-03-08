@@ -24,7 +24,7 @@ export default function HomePageHeader() {
         <div
           className="relative flex items-center justify-between px-8 md:px-16"
           style={{
-            height: '55px',
+            height: '70px',
             borderRadius: '999px',
             background: `
               linear-gradient(
@@ -93,32 +93,46 @@ export default function HomePageHeader() {
                 letterSpacing: '0.05em'
               }}
             >
-              THẾ GIỚI KHOA HỌC VIỄN TƯỞNG
+              THƯ VIỆN KHOA HỌC VIỄN TƯỞNG
             </h1>
           </div>
 
           {/* CENTER SECTION - Circular Logo (overlaps header) */}
-          <div 
-            className="absolute left-1/2 top-1/2 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform duration-300"
+          <div
+            className="absolute left-1/2 top-1/2 flex items-center justify-center"
             style={{
-              transform: 'translate(-50%, -50%)',
-              width: '80px',
-              height: '80px',
-              borderRadius: '50%',
-              background: 'white',
-              border: '4px solid #2e63b6',
-              boxShadow: '0 0 0 4px rgba(255, 255, 255, 0.15), 0 8px 20px rgba(0, 0, 0, 0.25)',
-              zIndex: 20,
+              transform: "translate(-50%, -50%)",
+              width: "110px",
+              height: "110px",
+              zIndex: 20
             }}
           >
-            {/* Book icon inside circle */}
+
+            {/* VIỀN SVG */}
+            <img
+              src="/src/img/SVG/vien-logo.svg"
+              alt="viền logo"
+              style={{
+                position: "absolute",
+                width: "100%",
+                height: "100%",
+                objectFit: "contain"
+              }}
+            />
+
+            {/* LOGO Ở GIỮA */}
             <img
               src="/src/img/SVG/logo.svg"
-              width="60"
-              height="60"
-              alt="Logo thư viện"
-              className="text-blue-600"
+              alt="logo"
+              style={{
+                width: "65%",
+                height: "65%",
+                objectFit: "contain",
+                position: "relative",
+                zIndex: 2
+              }}
             />
+
           </div>
 
           {/* RIGHT SECTION - Buttons and Menu */}
