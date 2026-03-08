@@ -1,7 +1,7 @@
 import { FormEvent, useMemo, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { GraduationCap, UserCircle2 } from 'lucide-react'
-import TopNavBar from '../components/thu-vien-xanh/TopNavBar'
+import TopNavBar from '../components/thu-vien-xanh/TopNavBarNoSearch'
 import { useAuth } from '../contexts/AuthContext'
 
 type AuthMode = 'login' | 'register'

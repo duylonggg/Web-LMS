@@ -40,7 +40,7 @@ export default function HomePageHeader() {
                 #2ba7a1 100%
               )
             `,
-            border: '2px solid rgba(255, 255, 255, 0.35)',
+            border: '2px solid rgb(255, 255, 255)',
             boxShadow: '0 4px 10px rgba(0,0,0,0.15), 0 0 20px rgba(0,150,200,0.2)',
           }}
         >
